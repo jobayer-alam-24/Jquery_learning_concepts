@@ -1,3 +1,88 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+main
+{
+    margin: 10px 10px 1000px 10px;
+}
+.b-top
+{
+    border-top: 8px solid rgb(95, 133, 20);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.olive {
+    background-color: olive;
+}
+.menu
+{
+    overflow: hidden;
+    text-align: center;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 95% 5%;
+}
+.menu ul li
+{
+    display: inline-block;
+    list-style-type: none;
+    margin: 8px;
+}
+.menu ul li:first-child
+{
+    margin-left: 5%;
+}
+.menu ul li a
+{
+    text-decoration: none;
+    color: white;
+    opacity: 0.8;
+    transition: all .3s;
+}
+.bars
+{
+    color: white;
+    font-size: 25px;
+    opacity: .8;
+}
+.bars:hover
+{
+    opacity: 1;
+}
+.menu a:hover
+{
+    text-decoration: underline;
+    opacity: 1;
+}
+.heading
+{
+    background-color: orange;
+    padding: 5px 10px;
+    text-align: center;
+    color: white;
+    margin-bottom: 0;
+    overflow: hidden;
+    border-bottom: 5px solid rgb(226, 116, 14);
+    border-left: 5px solid rgb(226, 116, 14);
+    border-right: 5px solid rgb(226, 116, 14);
+    cursor: pointer;
+}
+.heading-body
+{
+    background-color: rgba(255, 166, 0, 0.849);
+    margin-top: 0;
+    padding: 20px 10px;
+    text-align: center;
+    color: white;
+    border-left: 5px solid rgb(226, 116, 14);
+    border-right: 5px solid rgb(226, 116, 14);
+}
 table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
@@ -16,6 +101,10 @@ table, th, td {
     background-color: rgb(173, 15, 76);
     padding: 10px;
     color: white;
+}
+.mt
+{
+    margin-top: 5px; 
 }
 .box
 {

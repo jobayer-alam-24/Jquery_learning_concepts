@@ -1,36 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jquery - practice</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
-    
-    <p id="showName"></p>
-    <button class="btn">Click me!</button>
-    <div>Universal Selector Example</div>
-    <p>Another element for universal selector</p>
+    <header>
+        <div class="menu olive">
+            <div>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About me</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <a href="#">
+                <i class="fa-solid fa-bars bars"></i>
+            </a>
+        </div>
+        <div class="olive b-top olive-image">
+            <img src="images/olive.png" alt="olive" class="olive-pic">
+        </div>
+    </header>
+    <main>
+        <p id="showName"></p>
+        <button class="btn">Click me!</button>
+        <div>Universal Selector Example</div>
+        <p>Another element for universal selector</p>
 
-    <div class="myClass">This is a class selector example</div>
-    <span class="myClass">Another class selector example</span>
+        <div class="myClass">This is a class selector example</div>
+        <span class="myClass">Another class selector example</span>
 
-    <div id="myId">This is an ID selector example</div>
+        <div id="myId">This is an ID selector example</div>
 
-    <input type="text" name="username" attributeName="value" placeholder="Enter username">
-    <input type="text" name="password" attributeName="value" placeholder="Enter password">
-    <input type="checkbox" attributeName>
-    <button type="submit">submit</button><br><br>
-    <table>
-        <tr><td>Row 1</td></tr>
-        <tr><td>Row 2</td></tr>
-        <tr><td>Row 3</td></tr>
-        <tr><td>Row 4</td></tr>
-    </table>
-    <div class="box"></div>
+        <input type="text" name="username" attributeName="value" placeholder="Enter username">
+        <input type="text" name="password" attributeName="value" placeholder="Enter password">
+        <input type="checkbox" attributeName>
+        <button type="submit">submit</button><br><br>
+        <table>
+            <tr>
+                <td>Row 1</td>
+            </tr>
+            <tr>
+                <td>Row 2</td>
+            </tr>
+            <tr>
+                <td>Row 3</td>
+            </tr>
+            <tr>
+                <td>Row 4</td>
+            </tr>
+        </table>
+        <div class="box"></div>
+        <div class="mt">
+            <button id="show">Show</button>
+            <button id="hide">Hide</button><br><br>
+            <img id="bird" src="images/bird.jpg" alt="bird" width="200">
+        </div>
+        <div class="mt">
+            <button id="toggle">Show / Hide</button><br><br>
+            <img id="bird2" src="images/bird.jpg" alt="bird" width="200">
+        </div><br><br>
+        <div>
+            <h2 class="heading">Show Text</h2>
+            <p class="heading-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus eius quibusdam aspernatur voluptate magnam impedit consequatur aperiam culpa adipisci? Magnam neque quos explicabo culpa nihil enim quo vitae laudantium illum?
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde laboriosam, consequuntur dolore optio, iste voluptas saepe quia quis perspiciatis, numquam quisquam officiis voluptatum reiciendis provident. Obcaecati explicabo in aperiam facilis.
+            </p>
+        </div>
+    </main>
+
+
+
     <!-- jquery library  -->
     <script src="./library_jquery/jquery-3.7.1.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>
