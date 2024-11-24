@@ -107,4 +107,13 @@ $(function ()
         $('.olive-image').fadeToggle(2000); 
         $('.olive-pic').show();
     })
+    // $('#s-up').bind('click', () => {
+    //     $('.box').slideUp();
+    // })
+    // $('#s-down').bind('click', () => {
+    //     $('.box').slideDown();
+    // })
+    $('#s-toggle').bind('click', () => {
+        $('.box').slideToggle();
+    })
 })
