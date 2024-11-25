@@ -72,48 +72,66 @@
     * opacity = 0 - 1
     * callback = is a function that is passed as an argument to another function
 */
-$(function() 
-{
-    $('#show').bind('click', () => 
-    {
-        $('#bird').show('slow', alertName("Show")).fadeIn("slow");
-    })
-    $('#hide').bind('click', () => 
-    {
-        $('#bird').hide(3000).fadeOut();
-    })
-    $('#toggle').bind('click', () => 
-    {
-        $('#bird2').toggle("slow")
-    })
-    $('.heading').click(() =>  
-    {
-        // $(".heading-body").fadeToggle("fast");
-        $('.heading-body').fadeToggle();
-    })
-    $('.btn').bind('click', () => {
-        $('.box').fadeTo("slow", .5, () => console.log("Fade to Done")).hide("slow");
-    });
-})
-function alertName(name)
-{
-    alert("image " + name);
-}
-$(function () 
-{
-    $('.olive-image').hide();
-    $('.olive-pic').hide();
-    $('.bars').bind('click', () => {
-        $('.olive-image').fadeToggle(2000); 
-        $('.olive-pic').show();
-    })
+// $(function() 
+// {
+//     let show = $('#show');
+//     let bird = $('#bird');
+//     let hide = $('#hide');
+//     show.bind('click', () => 
+//     {
+//         bird.show('slow', alertName("Show")).fadeIn("slow");
+//     })
+//     hide.bind('click', () => 
+//     {
+//         bird.hide(3000).fadeOut();
+//     })
+//     $('#toggle').bind('click', () => 
+//     {
+//         $('#bird2').toggle("slow")
+//     })
+//     $('.heading').click(() =>  
+//     {
+//         // $(".heading-body").fadeToggle("fast");
+//         $('.heading-body').fadeToggle();
+//     })
+//     $('.btn').bind('click', () => {
+//         $('.box').fadeTo("slow", .5, () => console.log("Fade to Done")).hide("slow");
+//     });
+// })
+// function alertName(name)
+// {
+//     alert("image " + name);
+// }
+// $(function () 
+// {
+//     $('.olive-image').hide();
+//     $('.olive-pic').hide();
+//     $('.bars').bind('click', () => {
+//         $('.olive-image').fadeToggle(2000); 
+//         $('.olive-pic').show();
+//     })
     // $('#s-up').bind('click', () => {
     //     $('.box').slideUp();
     // })
     // $('#s-down').bind('click', () => {
     //     $('.box').slideDown();
     // })
-    $('#s-toggle').bind('click', () => {
-        $('.box').slideToggle();
+//     $('#s-toggle').bind('click', () => {
+//         $('.box').slideToggle();
+//     })
+// })
+$(function () {
+    let start = $('#sta');
+    let stop = $('#sto');
+    let catchBox = $('.catch');
+    
+    start.bind('click', () => 
+    {
+        catchBox.animate({
+            left: "+=400px",
+            fontSize: "2rem"
+        }, 4000);
+        catchBox.fadeIn("slow");
     })
+    stop.click(() => catchBox.stop(true, true))
 })

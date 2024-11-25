@@ -114,3 +114,15 @@ table, th, td {
     cursor: pointer;
     background-color: blue;
 }
+.catch
+{
+    width: 200px;
+    height: 200px;
+    background-color: rgba(255, 166, 0, 0.76);
+    border: 5px solid orangered;
+    display: flex;
+    justify-content: center;
+    color: white;
+    align-items: center;
+    position: relative;
+}
