@@ -102,24 +102,27 @@
 // {
 //     alert("image " + name);
 // }
-// $(function () 
-// {
-//     $('.olive-image').hide();
-//     $('.olive-pic').hide();
-//     $('.bars').bind('click', () => {
-//         $('.olive-image').fadeToggle(2000); 
-//         $('.olive-pic').show();
-//     })
-    // $('#s-up').bind('click', () => {
-    //     $('.box').slideUp();
-    // })
-    // $('#s-down').bind('click', () => {
-    //     $('.box').slideDown();
-    // })
-//     $('#s-toggle').bind('click', () => {
-//         $('.box').slideToggle();
-//     })
-// })
+$(function () 
+{
+    $('.olive-image').hide();
+    $('.olive-pic').hide();
+    $('.bars').bind('click', () => {
+        $('.olive-image').fadeToggle(2000, () => alert("Toggling..")); 
+        $('.olive-pic').show();
+    })
+    $('#s-up').bind('click', () => {
+        $('.box').slideUp("slow", () => 
+        {
+            console.log("Slide up Completed!");
+        });
+    })
+    $('#s-down').bind('click', () => {
+        $('.box').slideDown().slideUp().fadeIn(3000);
+    })
+    $('#s-toggle').bind('click', () => {
+        $('.box').slideToggle();
+    })
+})
 $(function () {
     let start = $('#sta');
     let stop = $('#sto');
@@ -130,8 +133,18 @@ $(function () {
         catchBox.animate({
             left: "+=400px",
             fontSize: "2rem"
-        }, 4000);
-        catchBox.fadeIn("slow");
+        }, 4000, () => {
+            alert("Animation Completed!");
+        }).animate(
+            {
+                left: "-=400px",
+                fontSize: "2rem"
+            },
+            4000
+        );
+        catchBox.fadeIn("slow", () => {
+            alert("Fade In Completed!");
+        });
     })
     stop.click(() => catchBox.stop(true, true))
 })
