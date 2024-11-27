@@ -91,7 +91,7 @@
 //     })
 //     $('.heading').click(() =>  
 //     {
-//         // $(".heading-body").fadeToggle("fast");
+        // $(".heading-body").fadeToggle("fast");
 //         $('.heading-body').fadeToggle();
 //     })
 //     $('.btn').bind('click', () => {
@@ -147,4 +147,64 @@ $(function () {
         });
     })
     stop.click(() => catchBox.stop(true, true))
+})
+$(function () 
+{
+    $(document).submit((e) => 
+    {
+        e.preventDefault();
+
+        let name = $("#name").val();
+        let age = $("#age").val();
+        let email = $("#email").val();
+        let password = $("#password").val();
+
+        alert("Name: " + name + "\n" + "Age: " + age + "\n" + "Email: " + email + "\n" + "Password: " + password);
+    })
+    let text = $('.heading-body').text();
+    $('.btn-show').click(() => 
+    {
+        $('#show-text').text(text);
+    })
+    $('#s-name').click((e) => 
+    {
+        e.preventDefault();
+        $("#name").val("Rahim Khan");
+    })
+    $('#s-age').click((e) => 
+    {
+        e.preventDefault();
+        $('#age').val(14);
+    })
+    $('#s-email').click((e) => 
+    {
+        e.preventDefault();
+        $('#email').val("rahim@gmail.com");
+    })
+    $('#s-password').click((e) => 
+    {
+        e.preventDefault();
+        $('#password').val("123");
+    }) 
+    let formHtml = $('form').html();
+    $('#s-form').html(formHtml);
+    console.log(formHtml);
+
+    let setBird = $("#s-bird");
+    let setOlive = $("#s-olive");
+    let imageContainer = $('#set-image');
+    console.log(imageContainer.attr('width'));
+    setBird.click(() =>
+    {
+        imageContainer.attr("src", "images/bird.jpg");
+    })
+    setOlive.click(() => 
+    {
+        imageContainer.attr(
+            {
+                "src": "images/olive.png",
+                "width": "200px"
+            }
+        );
+    })
 })
