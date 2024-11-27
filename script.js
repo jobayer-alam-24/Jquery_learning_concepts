@@ -9,8 +9,8 @@
 //         console.log(e.target);
 //     });
 // });
- //!2. Types of Selectors : element, class, id, types, attributes, values of attributes... more: *, this (current html element), [attributeName], tr:even, tr:odd
- // selector starts with - $('selector') 
+//!2. Types of Selectors : element, class, id, types, attributes, values of attributes... more: *, this (current html element), [attributeName], tr:even, tr:odd
+// selector starts with - $('selector') 
 // $(function () {
 //     $('.btn').click(() =>
 //     {
@@ -91,7 +91,7 @@
 //     })
 //     $('.heading').click(() =>  
 //     {
-        // $(".heading-body").fadeToggle("fast");
+// $(".heading-body").fadeToggle("fast");
 //         $('.heading-body').fadeToggle();
 //     })
 //     $('.btn').bind('click', () => {
@@ -102,17 +102,15 @@
 // {
 //     alert("image " + name);
 // }
-$(function () 
-{
+$(function() {
     $('.olive-image').hide();
     $('.olive-pic').hide();
     $('.bars').bind('click', () => {
-        $('.olive-image').fadeToggle(2000, () => alert("Toggling..")); 
+        $('.olive-image').fadeToggle(2000, () => alert("Toggling.."));
         $('.olive-pic').show();
     })
     $('#s-up').bind('click', () => {
-        $('.box').slideUp("slow", () => 
-        {
+        $('.box').slideUp("slow", () => {
             console.log("Slide up Completed!");
         });
     })
@@ -123,88 +121,103 @@ $(function ()
         $('.box').slideToggle();
     })
 })
-$(function () {
-    let start = $('#sta');
-    let stop = $('#sto');
-    let catchBox = $('.catch');
-    
-    start.bind('click', () => 
-    {
-        catchBox.animate({
-            left: "+=400px",
-            fontSize: "2rem"
-        }, 4000, () => {
-            alert("Animation Completed!");
-        }).animate(
-            {
-                left: "-=400px",
-                fontSize: "2rem"
-            },
-            4000
-        );
-        catchBox.fadeIn("slow", () => {
-            alert("Fade In Completed!");
-        });
-    })
-    stop.click(() => catchBox.stop(true, true))
-})
-$(function () 
-{
-    $(document).submit((e) => 
-    {
-        e.preventDefault();
+// $(function () {
+//     let start = $('#sta');
+//     let stop = $('#sto');
+//     let catchBox = $('.catch');
 
-        let name = $("#name").val();
-        let age = $("#age").val();
-        let email = $("#email").val();
-        let password = $("#password").val();
+//     start.bind('click', () => {
+//         catchBox.animate({
+//             left: "+=400px",
+//             fontSize: "2rem"
+//         }, 4000, () => {
+//             alert("Animation Completed!");
+//         }).animate(
+//             {
+//                 left: "-=400px",
+//                 fontSize: "2rem"
+//             },
+//             4000
+//         );
+//         catchBox.fadeIn("slow", () => {
+//             alert("Fade In Completed!");
+//         });
+//     })
+//     stop.click(() => catchBox.stop(true, true))
+// })
+// $(function() {
+//     $("#form").submit((e) => {
+//         e.preventDefault();
 
-        alert("Name: " + name + "\n" + "Age: " + age + "\n" + "Email: " + email + "\n" + "Password: " + password);
-    })
-    let text = $('.heading-body').text();
-    $('.btn-show').click(() => 
-    {
-        $('#show-text').text(text);
-    })
-    $('#s-name').click((e) => 
-    {
-        e.preventDefault();
-        $("#name").val("Rahim Khan");
-    })
-    $('#s-age').click((e) => 
-    {
-        e.preventDefault();
-        $('#age').val(14);
-    })
-    $('#s-email').click((e) => 
-    {
-        e.preventDefault();
-        $('#email').val("rahim@gmail.com");
-    })
-    $('#s-password').click((e) => 
-    {
-        e.preventDefault();
-        $('#password').val("123");
-    }) 
-    let formHtml = $('form').html();
-    $('#s-form').html(formHtml);
-    console.log(formHtml);
+//         let name = $("#name").val();
+//         let age = $("#age").val();
+//         let email = $("#email").val();
+//         let password = $("#password").val();
 
-    let setBird = $("#s-bird");
-    let setOlive = $("#s-olive");
-    let imageContainer = $('#set-image');
-    console.log(imageContainer.attr('width'));
-    setBird.click(() =>
-    {
-        imageContainer.attr("src", "images/bird.jpg");
-    })
-    setOlive.click(() => 
-    {
-        imageContainer.attr(
-            {
-                "src": "images/olive.png",
-                "width": "200px"
-            }
-        );
+//         alert("Name: " + name + "\n" + "Age: " + age + "\n" + "Email: " + email + "\n" + "Password: " + password);
+//     })
+//     let text = $('.heading-body').text();
+//     $('.btn-show').click(() => {
+//         $('#show-text').text(text);
+//     })
+//     $('#s-name').click((e) => {
+//         e.preventDefault();
+//         $("#name").val("Rahim Khan");
+//     })
+//     $('#s-age').click((e) => {
+//         e.preventDefault();
+//         $('#age').val(14);
+//     })
+//     $('#s-email').click((e) => {
+//         e.preventDefault();
+//         $('#email').val("rahim@gmail.com");
+//     })
+//     $('#s-password').click((e) => {
+//         e.preventDefault();
+//         $('#password').val("123");
+//     })
+//     let formHtml = $('form').html();
+//     $('#s-form').html(formHtml);
+//     console.log(formHtml);
+
+//     let setBird = $("#s-bird");
+//     let setOlive = $("#s-olive");
+//     let imageContainer = $('#set-image');
+//     console.log(imageContainer.attr('width'));
+//     setBird.click(() => {
+//         imageContainer.attr("src", "images/bird.jpg");
+//     })
+//     setOlive.click(() => {
+//         imageContainer.attr(
+//             {
+//                 "src": "images/olive.png",
+//                 "width": "200px"
+//             }
+//         );
+//     })
+//     let helloText = $('#hello-text');
+//     helloText.click(() => {
+//         helloText.text(function (i, oldText) {
+//             console.log(i + " " + oldText);
+//             return "Hello Learners!";
+//         });
+//     })
+// })
+$(function() {
+    $('#form2').submit((e) => {
+        e.preventDefault();
+        let taskLists = $('#tasks-lists');
+        let taskName = $('#task-input').val();
+        if(taskName)
+        {
+            let addedTask = `<li class="mb">${taskName} <button class="del">Delete</button> </li>`;
+            taskLists.append(addedTask);
+            $('#task-input').val('');
+        }
+        else
+        {
+            alert("Error: Empty Task!");
+        }
+       
     })
 })
