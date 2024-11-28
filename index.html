@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jquery - practice</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -29,97 +31,124 @@
         </div>
     </header>
     <main>
-        <button class="btn-show">Show Text</button>
-        <p id="show-text"></p>
-        <p id="showName"></p>
-        <button class="btn">Click me!</button>
-        <div>Universal Selector Example</div>
-        <p>Another element for universal selector</p>
+        <section class="h-30">
+            <div class="todo-container-outer">
+                <div class="form-container">
+                    <form action="#" method="post">
+                        <input type="text" id="comment" name="comment" placeholder="Enter your comment....">
+                        <button type="submit" id="addEnd">Append</button>
+                        <button type="submit" id="addStart">Prepend</button>
+                        <button type="submit" id="clearAll">Clear All</button>
+                    </form>
+                    <div>
+                        <h1 class="commentHead">Comments</h1>
+                        <ol id="comments-container">
 
-        <div class="myClass">This is a class selector example</div>
-        <span class="myClass">Another class selector example</span>
+                        </ol>
+                    </div> 
+                    <ul id="comments-container">
 
-        <div id="myId">This is an ID selector example</div>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <button id="rem-next-sec">Remove Next Section</button>
+        <section id="sec-2">
+            <button class="btn-show">Show Text</button>
+            <p id="show-text"></p>
+            <p id="showName"></p>
+            <button class="btn">Click me!</button>
+            <div>Universal Selector Example</div>
+            <p>Another element for universal selector</p>
 
-        <input type="text" name="username" attributeName="value" placeholder="Enter username">
-        <input type="text" name="password" attributeName="value" placeholder="Enter password">
-        <input type="checkbox" attributeName>
-        <button type="submit">submit</button><br><br>
-        <table>
-            <tr>
-                <td>Row 1</td>
-            </tr>
-            <tr>
-                <td>Row 2</td>
-            </tr>
-            <tr>
-                <td>Row 3</td>
-            </tr>
-            <tr>
-                <td>Row 4</td>
-            </tr>
-        </table>
-        <div class="box"></div>
-        <div class="mt">
-            <button id="show">Show</button>
-            <button id="s-up">Slide Up</button>
-            <button id="s-down">Slide Down</button>
-            <button id="s-toggle">Slide Toggle</button>
-            <button id="hide">Hide</button><br><br>
-            <img id="bird" src="images/bird.jpg" alt="bird" width="200">
-        </div>
-        <div class="mt">
-            <button id="toggle">Show / Hide</button><br><br>
-            <img id="bird2" src="images/bird.jpg" alt="bird" width="200">
-        </div><br><br>
-        <div>
-            <h2 class="heading">Show Text</h2>
-            <p class="heading-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus eius quibusdam aspernatur voluptate magnam impedit consequatur aperiam culpa adipisci? Magnam neque quos explicabo culpa nihil enim quo vitae laudantium illum?
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde laboriosam, consequuntur dolore optio, iste voluptas saepe quia quis perspiciatis, numquam quisquam officiis voluptatum reiciendis provident. Obcaecati explicabo in aperiam facilis.
-            </p>
-            
-        </div>
+            <div class="myClass">This is a class selector example</div>
+            <span class="myClass">Another class selector example</span>
 
-        <div class="catch">
-            <h3>Box</h3>
-        </div>
-        <button id="sta">Start</button>
-        <button id="sto">Stop</button>
+            <div id="myId">This is an ID selector example</div>
 
-        <div id="form">
-            <form action="#" method="post">
-               <div>
-                <label for="name">Name: </label>
-                <input type="text" id="name">
-               </div>
-               <div>
-                <label for="age">Age: </label>
-                <input type="text" id="age">
-               </div>
-               <div>
-                <label for="email">Email: </label>
-                <input type="email" id="email">
-               </div>
-               <div>
-                <label for="password">Password: </label>
-                <input type="password" id="password">
-               </div>
-               <div>
-                <button id="s-name">Set Name</button>
-                <button id="s-age">Set Age</button>
-                <button id="s-email">Set Email</button>
-                <button id="s-password">Set Password</button>
-               </div>
-               <button type="submit">Submit</button>
-            </form>
-            <form action="#" method="post" id="s-form"></form>
-            <button id="s-bird">Set Bird Image</button>
-            <button id="s-olive">Set Olive Image</button><br><br>
-            <img src="" alt="" id="set-image" width="100">
-            <h4 id="hello-text">Hello, Jquery</h4>
-        </div>
+            <input type="text" name="username" attributeName="value" placeholder="Enter username">
+            <input type="text" name="password" attributeName="value" placeholder="Enter password">
+            <input type="checkbox" attributeName>
+            <button type="submit">submit</button><br><br>
+            <table>
+                <tr>
+                    <td>Row 1</td>
+                </tr>
+                <tr>
+                    <td>Row 2</td>
+                </tr>
+                <tr>
+                    <td>Row 3</td>
+                </tr>
+                <tr>
+                    <td>Row 4</td>
+                </tr>
+            </table>
+            <div class="box"></div>
+            <div class="mt">
+                <button id="show">Show</button>
+                <button id="s-up">Slide Up</button>
+                <button id="s-down">Slide Down</button>
+                <button id="s-toggle">Slide Toggle</button>
+                <button id="hide">Hide</button><br><br>
+                <img id="bird" src="images/bird.jpg" alt="bird" width="200">
+            </div>
+            <div class="mt">
+                <button id="toggle">Show / Hide</button><br><br>
+                <img id="bird2" src="images/bird.jpg" alt="bird" width="200">
+            </div><br><br>
+            <div>
+                <h2 class="heading">Show Text</h2>
+                <p class="heading-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus eius
+                    quibusdam aspernatur voluptate magnam impedit consequatur aperiam culpa adipisci? Magnam neque quos
+                    explicabo culpa nihil enim quo vitae laudantium illum?
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde laboriosam, consequuntur dolore
+                    optio, iste voluptas saepe quia quis perspiciatis, numquam quisquam officiis voluptatum reiciendis
+                    provident. Obcaecati explicabo in aperiam facilis.
+                </p>
+
+            </div>
+
+            <div class="catch">
+                <h3>Box</h3>
+            </div>
+            <button id="sta">Start</button>
+            <button id="sto">Stop</button>
+
+            <div id="form">
+                <form action="#" method="post">
+                    <div>
+                        <label for="name">Name: </label>
+                        <input type="text" id="name">
+                    </div>
+                    <div>
+                        <label for="age">Age: </label>
+                        <input type="text" id="age">
+                    </div>
+                    <div>
+                        <label for="email">Email: </label>
+                        <input type="email" id="email">
+                    </div>
+                    <div>
+                        <label for="password">Password: </label>
+                        <input type="password" id="password">
+                    </div>
+                    <div>
+                        <button id="s-name">Set Name</button>
+                        <button id="s-age">Set Age</button>
+                        <button id="s-email">Set Email</button>
+                        <button id="s-password">Set Password</button>
+                    </div>
+                    <button type="submit">Submit</button>
+                </form>
+                <form action="#" method="post" id="s-form"></form>
+                <button id="s-bird">Set Bird Image</button>
+                <button id="s-olive">Set Olive Image</button><br><br>
+                <img src="" alt="" id="set-image" width="100">
+                <h4 id="hello-text">Hello, Jquery</h4>
+            </div>
+        </section>
     </main>
-
 
 
     <!-- jquery library  -->

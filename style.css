@@ -11,6 +11,33 @@ body
     border: none;
     border: 2px ridge rgb(61, 143, 14);
 }
+.h-30
+{
+    height: 400px;
+}
+.cs-dis
+{
+    display: grid;
+    grid-template-columns: 70% 30%;
+    list-style-type: none;
+    
+}
+#comments-container{
+    padding-left: 0;
+}
+.del-btn
+{
+    border: 3px solid salmon;
+    background-color: red;
+    color: white;
+}
+.commentHead
+{
+    background-color: rgb(95, 110, 10);
+    text-align: center;
+    color: white;
+    padding: 8px 5px;
+}
 .head
 {
     text-align: center;
@@ -21,7 +48,6 @@ body
     margin-top: 0;
 }
 .mb{margin-bottom: 5px;}
-.d-none{display: none;}
 .todo-container-outer
 {
     display: flex;

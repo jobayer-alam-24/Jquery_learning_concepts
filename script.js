@@ -1,3 +1,4 @@
+$(document).submit((e) => e.preventDefault());
 //day 1
 /* Document Ready function: write all the  jquery code inside this function 
     !1. $(selector).action()
@@ -220,4 +221,52 @@ $(function() {
         }
        
     })
+})
+$(function() {
+        
+    $("#addEnd").click(() => {
+        
+        var formInput =$(".form-container form [name='comment']");
+        var formInputValue = formInput.val().toUpperCase();
+        var commentsContainer = $("#comments-container");
+        if(formInputValue)
+        {
+            let commentGenerate = `<li class="mb cs-dis">${formInputValue}
+            <button class="del-btn">Delete</button> </li>`;
+            commentsContainer.append(commentGenerate);
+            formInput.val('');
+
+        }
+        else
+        {
+            alert("Error: Empty Comment!");
+        }
+    })
+    $("#addStart").click(() => 
+    {   
+        var formInput =$(".form-container form [name='comment']");
+        var formInputValue = formInput.val().toUpperCase();
+        var commentsContainer = $("#comments-container");
+        if(formInputValue)
+        {
+            let generateComment = `<li class="mb cs-dis">${formInputValue}
+            <button class="del-btn">Delete</button> </li>`;
+            commentsContainer.prepend(generateComment);
+        }
+        else
+        {
+            alert("Error: Empty Comment!");
+        }
+    })
+    $("#clearAll").click(() => {
+        var commentsContainer = $("#comments-container");
+        commentsContainer.empty();
+    })
+    $("#rem-next-sec").click(() => {
+        $("#sec-2").remove();
+    })
+    var helloContent = `<span>Hello, Bangladesh</span>`;
+    let box = $(".box");
+    box.before(helloContent);
+    box.after(helloContent + ` Welcome!`);
 })
