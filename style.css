@@ -98,7 +98,7 @@ main
 }
 .bars
 {
-    color: white;
+    color: hsl(0, 0%, 100%);
     font-size: 25px;
     opacity: .8;
 }
@@ -116,13 +116,16 @@ main
     background-color: orange;
     padding: 5px 10px;
     text-align: center;
-    color: white;
     margin-bottom: 0;
     overflow: hidden;
     border-bottom: 5px solid rgb(226, 116, 14);
     border-left: 5px solid rgb(226, 116, 14);
     border-right: 5px solid rgb(226, 116, 14);
     cursor: pointer;
+}
+.head-color
+{
+    color: white;
 }
 .heading-body
 {

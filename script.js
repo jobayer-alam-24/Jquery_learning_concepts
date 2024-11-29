@@ -270,3 +270,28 @@ $(function() {
     box.before(helloContent);
     box.after(helloContent + ` Welcome!`);
 })
+$(function() 
+{
+    $("#addCss").click(() => 
+    {
+        $('#head').addClass("heading head-color");
+        $('#heading-body').addClass("heading-body");
+    })
+    $("#removeCss").click(() => {
+        $("#head").removeClass("heading head-color");
+        $("#heading-body").removeClass("heading-body");
+    })
+    $('#toggleCss').click(() => 
+    {
+        $('#head').toggleClass("heading head-color");
+        $("#heading-body").toggleClass("heading-body");
+    })
+    $('.menu').css("background-color", "hotpink");
+    $('.bars').css({
+        "color" : "green",
+        "fontSize" : "3rem"
+    });
+
+    let property = $(".menu").css("overflow");
+    $(".lastLi").text(property);
+})
