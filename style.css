@@ -160,11 +160,24 @@ table, th, td {
 {
     margin-top: 5px; 
 }
+.box-model
+{
+    width: 400px;
+    height: 400px;
+    padding: 5px;
+    background-color: rgb(54, 78, 6);
+    border: 5px solid olive;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px auto;
+}
 .box
 {
     width: 200px;
     height: 200px;
-    margin-top: 5px;
+    padding: 5px;
+    margin: 5px;
     cursor: pointer;
     background-color: blue;
 }

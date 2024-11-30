@@ -103,25 +103,25 @@ $(document).submit((e) => e.preventDefault());
 // {
 //     alert("image " + name);
 // }
-$(function() {
-    $('.olive-image').hide();
-    $('.olive-pic').hide();
-    $('.bars').bind('click', () => {
-        $('.olive-image').fadeToggle(2000, () => alert("Toggling.."));
-        $('.olive-pic').show();
-    })
-    $('#s-up').bind('click', () => {
-        $('.box').slideUp("slow", () => {
-            console.log("Slide up Completed!");
-        });
-    })
-    $('#s-down').bind('click', () => {
-        $('.box').slideDown().slideUp().fadeIn(3000);
-    })
-    $('#s-toggle').bind('click', () => {
-        $('.box').slideToggle();
-    })
-})
+// $(function() {
+//     $('.olive-image').hide();
+//     $('.olive-pic').hide();
+//     $('.bars').bind('click', () => {
+//         $('.olive-image').fadeToggle(2000, () => alert("Toggling.."));
+//         $('.olive-pic').show();
+//     })
+//     $('#s-up').bind('click', () => {
+//         $('.box').slideUp("slow", () => {
+//             console.log("Slide up Completed!");
+//         });
+//     })
+//     $('#s-down').bind('click', () => {
+//         $('.box').slideDown().slideUp().fadeIn(3000);
+//     })
+//     $('#s-toggle').bind('click', () => {
+//         $('.box').slideToggle();
+//     })
+// })
 // $(function () {
 //     let start = $('#sta');
 //     let stop = $('#sto');
@@ -204,94 +204,112 @@ $(function() {
 //         });
 //     })
 // })
-$(function() {
-    $('#form2').submit((e) => {
-        e.preventDefault();
-        let taskLists = $('#tasks-lists');
-        let taskName = $('#task-input').val();
-        if(taskName)
-        {
-            let addedTask = `<li class="mb">${taskName} <button class="del">Delete</button> </li>`;
-            taskLists.append(addedTask);
-            $('#task-input').val('');
-        }
-        else
-        {
-            alert("Error: Empty Task!");
-        }
+// $(function() {
+//     $('#form2').submit((e) => {
+//         e.preventDefault();
+//         let taskLists = $('#tasks-lists');
+//         let taskName = $('#task-input').val();
+//         if(taskName)
+//         {
+//             let addedTask = `<li class="mb">${taskName} <button class="del">Delete</button> </li>`;
+//             taskLists.append(addedTask);
+//             $('#task-input').val('');
+//         }
+//         else
+//         {
+//             alert("Error: Empty Task!");
+//         }
        
-    })
-})
-$(function() {
+//     })
+// })
+// $(function() {
         
-    $("#addEnd").click(() => {
+//     $("#addEnd").click(() => {
         
-        var formInput =$(".form-container form [name='comment']");
-        var formInputValue = formInput.val().toUpperCase();
-        var commentsContainer = $("#comments-container");
-        if(formInputValue)
-        {
-            let commentGenerate = `<li class="mb cs-dis">${formInputValue}
-            <button class="del-btn">Delete</button> </li>`;
-            commentsContainer.append(commentGenerate);
-            formInput.val('');
+//         var formInput =$(".form-container form [name='comment']");
+//         var formInputValue = formInput.val().toUpperCase();
+//         var commentsContainer = $("#comments-container");
+//         if(formInputValue)
+//         {
+//             let commentGenerate = `<li class="mb cs-dis">${formInputValue}
+//             <button class="del-btn">Delete</button> </li>`;
+//             commentsContainer.append(commentGenerate);
+//             formInput.val('');
 
-        }
-        else
-        {
-            alert("Error: Empty Comment!");
-        }
-    })
-    $("#addStart").click(() => 
-    {   
-        var formInput =$(".form-container form [name='comment']");
-        var formInputValue = formInput.val().toUpperCase();
-        var commentsContainer = $("#comments-container");
-        if(formInputValue)
-        {
-            let generateComment = `<li class="mb cs-dis">${formInputValue}
-            <button class="del-btn">Delete</button> </li>`;
-            commentsContainer.prepend(generateComment);
-        }
-        else
-        {
-            alert("Error: Empty Comment!");
-        }
-    })
-    $("#clearAll").click(() => {
-        var commentsContainer = $("#comments-container");
-        commentsContainer.empty();
-    })
-    $("#rem-next-sec").click(() => {
-        $("#sec-2").remove();
-    })
-    var helloContent = `<span>Hello, Bangladesh</span>`;
-    let box = $(".box");
-    box.before(helloContent);
-    box.after(helloContent + ` Welcome!`);
-})
-$(function() 
-{
-    $("#addCss").click(() => 
-    {
-        $('#head').addClass("heading head-color");
-        $('#heading-body').addClass("heading-body");
-    })
-    $("#removeCss").click(() => {
-        $("#head").removeClass("heading head-color");
-        $("#heading-body").removeClass("heading-body");
-    })
-    $('#toggleCss').click(() => 
-    {
-        $('#head').toggleClass("heading head-color");
-        $("#heading-body").toggleClass("heading-body");
-    })
-    $('.menu').css("background-color", "hotpink");
-    $('.bars').css({
-        "color" : "green",
-        "fontSize" : "3rem"
-    });
+//         }
+//         else
+//         {
+//             alert("Error: Empty Comment!");
+//         }
+//     })
+//     $("#addStart").click(() => 
+//     {   
+//         var formInput =$(".form-container form [name='comment']");
+//         var formInputValue = formInput.val().toUpperCase();
+//         var commentsContainer = $("#comments-container");
+//         if(formInputValue)
+//         {
+//             let generateComment = `<li class="mb cs-dis">${formInputValue}
+//             <button class="del-btn">Delete</button> </li>`;
+//             commentsContainer.prepend(generateComment);
+//         }
+//         else
+//         {
+//             alert("Error: Empty Comment!");
+//         }
+//     })
+//     $("#clearAll").click(() => {
+//         var commentsContainer = $("#comments-container");
+//         commentsContainer.empty();
+//     })
+//     $("#rem-next-sec").click(() => {
+//         $("#sec-2").remove();
+//     })
+//     var helloContent = `<span>Hello, Bangladesh</span>`;
+//     let box = $(".box");
+//     box.before(helloContent);
+//     box.after(helloContent + ` Welcome!`);
+// })
+// $(function() 
+// {
+//     $("#addCss").click(() => 
+//     {
+//         $('#head').addClass("heading head-color");
+//         $('#heading-body').addClass("heading-body");
+//     })
+//     $("#removeCss").click(() => {
+//         $("#head").removeClass("heading head-color");
+//         $("#heading-body").removeClass("heading-body");
+//     })
+//     $('#toggleCss').click(() => 
+//     {
+//         $('#head').toggleClass("heading head-color");
+//         $("#heading-body").toggleClass("heading-body");
+//     })
+//     $('.menu').css("background-color", "hotpink");
+//     $('.bars').css({
+//         "color" : "green",
+//         "fontSize" : "3rem"
+//     });
 
-    let property = $(".menu").css("overflow");
-    $(".lastLi").text(property);
+//     let property = $(".menu").css("overflow");
+//     $(".lastLi").text(property);
+// })
+$(function() {  
+    let box = $(".box-model");
+    let boxWidth = box.width();
+    let boxHeight = box.height();
+    let innerBox = $('#innerBox');
+    innerBox.width(boxWidth / 2);
+    innerBox.height(boxHeight / 2);
+    innerBox.css("background-color", "orange");
+
+    // console.log("Width: " + box.width() + "px");
+    // console.log("Height: " + box.height() + "px");
+    // console.log("Inner Width: " + box.innerWidth() + "px");
+    // console.log("Inner Height: " + box.innerHeight() + "px");
+    // console.log("Outer Width: " + box.outerWidth() + "px");
+    // console.log("Outer Height: " + box.outerHeight() + "px");
+    // console.log("Outer Width (true): " + box.outerWidth(true) + "px");
+    // console.log("Outer Height (true): " + box.outerHeight(true) + "px");
 })
