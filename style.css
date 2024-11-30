@@ -160,16 +160,18 @@ table, th, td {
 {
     margin-top: 5px; 
 }
-.box-model
+.box-model, #innerBox1, #innerBox2, #innerBox3
+
 {
-    width: 400px;
-    height: 400px;
-    padding: 5px;
-    background-color: rgb(54, 78, 6);
-    border: 5px solid olive;
     display: flex;
     align-items: center;
     justify-content: center;
+    border: 5px solid rgba(107, 104, 104, 0.63);
+}
+.box-model
+{
+    width: 400px;
+    height: 300px;
     margin: 50px auto;
 }
 .box

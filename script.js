@@ -204,105 +204,100 @@ $(document).submit((e) => e.preventDefault());
 //         });
 //     })
 // })
-// $(function() {
-//     $('#form2').submit((e) => {
-//         e.preventDefault();
-//         let taskLists = $('#tasks-lists');
-//         let taskName = $('#task-input').val();
-//         if(taskName)
-//         {
-//             let addedTask = `<li class="mb">${taskName} <button class="del">Delete</button> </li>`;
-//             taskLists.append(addedTask);
-//             $('#task-input').val('');
-//         }
-//         else
-//         {
-//             alert("Error: Empty Task!");
-//         }
-       
-//     })
-// })
-// $(function() {
-        
-//     $("#addEnd").click(() => {
-        
-//         var formInput =$(".form-container form [name='comment']");
-//         var formInputValue = formInput.val().toUpperCase();
-//         var commentsContainer = $("#comments-container");
-//         if(formInputValue)
-//         {
-//             let commentGenerate = `<li class="mb cs-dis">${formInputValue}
-//             <button class="del-btn">Delete</button> </li>`;
-//             commentsContainer.append(commentGenerate);
-//             formInput.val('');
 
-//         }
-//         else
-//         {
-//             alert("Error: Empty Comment!");
-//         }
-//     })
-//     $("#addStart").click(() => 
-//     {   
-//         var formInput =$(".form-container form [name='comment']");
-//         var formInputValue = formInput.val().toUpperCase();
-//         var commentsContainer = $("#comments-container");
-//         if(formInputValue)
-//         {
-//             let generateComment = `<li class="mb cs-dis">${formInputValue}
-//             <button class="del-btn">Delete</button> </li>`;
-//             commentsContainer.prepend(generateComment);
-//         }
-//         else
-//         {
-//             alert("Error: Empty Comment!");
-//         }
-//     })
-//     $("#clearAll").click(() => {
-//         var commentsContainer = $("#comments-container");
-//         commentsContainer.empty();
-//     })
-//     $("#rem-next-sec").click(() => {
-//         $("#sec-2").remove();
-//     })
-//     var helloContent = `<span>Hello, Bangladesh</span>`;
-//     let box = $(".box");
-//     box.before(helloContent);
-//     box.after(helloContent + ` Welcome!`);
-// })
-// $(function() 
-// {
-//     $("#addCss").click(() => 
-//     {
-//         $('#head').addClass("heading head-color");
-//         $('#heading-body').addClass("heading-body");
-//     })
-//     $("#removeCss").click(() => {
-//         $("#head").removeClass("heading head-color");
-//         $("#heading-body").removeClass("heading-body");
-//     })
-//     $('#toggleCss').click(() => 
-//     {
-//         $('#head').toggleClass("heading head-color");
-//         $("#heading-body").toggleClass("heading-body");
-//     })
-//     $('.menu').css("background-color", "hotpink");
-//     $('.bars').css({
-//         "color" : "green",
-//         "fontSize" : "3rem"
-//     });
+$(function() {
+    $("#addEnd").click(() => {
+        
+        var formInput =$(".form-container form [name='comment']");
+        var formInputValue = formInput.val().toUpperCase();
+        var commentsContainer = $("#comments-container");
+        if(formInputValue)
+        {
+            let commentGenerate = `<li class="mb cs-dis">${formInputValue}
+            <button class="del-btn">Delete</button> </li>`;
+            commentsContainer.append(commentGenerate);
+            formInput.val('');
+q
+        }
+        else
+        {
+            alert("Error: Empty Comment!");
+        }
+        
+    })
+    $("#addStart").click(() => 
+    {   
+        var formInput =$(".form-container form [name='comment']");
+        var formInputValue = formInput.val().toUpperCase();
+        var commentsContainer = $("#comments-container");
+        if(formInputValue)
+        {
+            let generateComment = `<li class="mb cs-dis">${formInputValue}
+            <button class="del-btn">Delete</button> </li>`;
+            commentsContainer.prepend(generateComment);
+        }
+        else
+        {
+            alert("Error: Empty Comment!");
+        }
+    })
+    $("#clearAll").click(() => {
+        var commentsContainer = $("#comments-container");
+        commentsContainer.empty();
+    })
+    $("#rem-next-sec").click(() => {
+        $("#sec-2").remove();
+    })
 
-//     let property = $(".menu").css("overflow");
-//     $(".lastLi").text(property);
-// })
+    var helloContent = `<span>Hello, Bangladesh</span>`;
+    let box = $(".box");
+    box.before(helloContent);
+    box.after(helloContent + ` Welcome!`);
+})
+$(function() 
+{
+    $("#addCss").click(() => 
+    {
+        $('#head').addClass("heading head-color");
+        $('#heading-body').addClass("heading-body");
+    })
+    $("#removeCss").click(() => {
+        $("#head").removeClass("heading head-color");
+        $("#heading-body").removeClass("heading-body");
+    })
+    $('#toggleCss').click(() => 
+    {
+        $('#head').toggleClass("heading head-color");
+        $("#heading-body").toggleClass("heading-body");
+    })
+    $('.menu').css("background-color", "hotpink");
+    $('.bars').css({
+        "color" : "green",
+        "fontSize" : "3rem"
+    });
+
+    let property = $(".menu").css("overflow");
+    $(".lastLi").text(property);
+})
 $(function() {  
     let box = $(".box-model");
     let boxWidth = box.width();
     let boxHeight = box.height();
-    let innerBox = $('#innerBox');
-    innerBox.width(boxWidth / 2);
-    innerBox.height(boxHeight / 2);
-    innerBox.css("background-color", "orange");
+    let innerBox1 = $('#innerBox1');
+    let innerBox2 = $('#innerBox2');
+    let innerBox3 = $('#innerBox3');
+    innerBox1.width(boxWidth / 2);
+    innerBox1.height(boxHeight / 2);
+    innerBox2.width(innerBox1.width() / 2);
+    innerBox2.height(innerBox1.height() / 2);
+    innerBox3.width(innerBox2.width() / 2);
+    innerBox3.height(innerBox2.height() / 2);
+    
+    //Selectors---
+    // innerBox3.parent().css("border-color", "red")
+    // innerBox3.parents().css("border-color", "red");
+    // innerBox3.parents("#innerBox2").css("border-color", "red");
+    // innerBox3.parentsUntil(box).css("border-color", "red");
 
     // console.log("Width: " + box.width() + "px");
     // console.log("Height: " + box.height() + "px");
