@@ -297,6 +297,23 @@ $(function() {
     innerBox4.height(innerBox3.height() / 2);
     
     //Selectors---
+    let mike = $('.mike');
+    let head = mike.parents('.children').prev();
+    head.css("color", "red");
+    let childrenChild = head.next().children().eq(1);
+    childrenChild.css("background-color", "red");
+    let mikeChildren = mike.parents('.children');
+    mikeChildren.css({
+        'background-color': 'olivedrab',
+        'padding' : "10px"
+    });
+    let mikeMember1 = mike.parents('.member');
+    let mikeMember2 = mikeMember1.next();
+    let mem3 = mikeMember2.next();
+    console.log(mikeMember1);
+    console.log(mikeMember2);
+    console.log(mem3);
+
     // innerBox3.parent().css("border-color", "red");
     // innerBox3.parents().css("border-color", "red");
     // innerBox3.parents("#innerBox2").css("border-color", "red");
