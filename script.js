@@ -297,23 +297,36 @@ $(function() {
     innerBox4.height(innerBox3.height() / 2);
     
     //Selectors---
-    let mike = $('.mike');
-    let head = mike.parents('.children').prev();
-    head.css("color", "red");
-    let childrenChild = head.next().children().eq(1);
-    childrenChild.css("background-color", "red");
-    let mikeChildren = mike.parents('.children');
-    mikeChildren.css({
-        'background-color': 'olivedrab',
-        'padding' : "10px"
-    });
-    let mikeMember1 = mike.parents('.member');
-    let mikeMember2 = mikeMember1.next();
-    let mem3 = mikeMember2.next();
-    console.log(mikeMember1);
-    console.log(mikeMember2);
-    console.log(mem3);
+    // let mike = $('.mike');
+    // let head = mike.parents('.children').prev();
+    // let childrenChild = head.next().children().eq(1);
+    // let mikeChildren = mike.parents('.children');
+    // let mikeMember1 = mike.parents('.member');
+    // let mikeMember2 = mikeMember1.next();
+    // let mem3 = mikeMember2.next();
+    // console.log(mikeMember1);
+    // console.log(mikeMember2);
+    // console.log(mem3);
 
+    /*Challenge Accepted*/
+    let children = $(".children");
+    let mem1 = children.find('.member').eq(0);
+    let mem2 = mem1.next();
+    let mem3 = mem2.next();
+    let head = children.prev().eq(0);
+    let memParent = head.parent();
+    let familyTree = memParent.parent();
+    let nameMike = mem1.children('.name');
+    let memChildren = nameMike.next();
+    let children1 = memChildren.children().eq(0);
+    let children2 = children1.next();
+    let mem2Children1 = mem2.children().eq(0);
+    let mem2Children2 = mem2Children1.next();
+    let mem3Children1 = mem3.children('.name');
+    let mem3Children2 = mem3Children1.next();
+    let mem3ChildrenMiddle = mem3Children2.children().eq(1);
+    let first1 = mem3ChildrenMiddle.prev();
+    let last1 = mem3ChildrenMiddle.next();
     // innerBox3.parent().css("border-color", "red");
     // innerBox3.parents().css("border-color", "red");
     // innerBox3.parents("#innerBox2").css("border-color", "red");
