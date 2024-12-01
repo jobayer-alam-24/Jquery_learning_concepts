@@ -327,6 +327,13 @@ $(function() {
     let mem3ChildrenMiddle = mem3Children2.children().eq(1);
     let first1 = mem3ChildrenMiddle.prev();
     let last1 = mem3ChildrenMiddle.next();
+    let mem3First = mem3.children().first();
+    let mem3Last = mem3.children().last();
+    console.log(mem3.children().eq(1));
+
+    $('div').filter('.spg').css('color', 'red'); //matched Item
+    $('div').not('.spg').css('color', 'green'); //Opposite
+    
     // innerBox3.parent().css("border-color", "red");
     // innerBox3.parents().css("border-color", "red");
     // innerBox3.parents("#innerBox2").css("border-color", "red");
