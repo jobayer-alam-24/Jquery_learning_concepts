@@ -160,7 +160,7 @@ table, th, td {
 {
     margin-top: 5px; 
 }
-.box-model, #innerBox1, #innerBox2, #innerBox3
+.box-model, #innerBox1, #innerBox2, #innerBox3, #innerBox4
 
 {
     display: flex;
@@ -168,9 +168,10 @@ table, th, td {
     justify-content: center;
     border: 5px solid rgba(107, 104, 104, 0.63);
 }
+
 .box-model
 {
-    width: 400px;
+    width: 500px;
     height: 300px;
     margin: 50px auto;
 }
@@ -195,3 +196,85 @@ table, th, td {
     align-items: center;
     position: relative;
 }
+.family-tree {
+    margin: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+ 
+  .member {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    margin: 0 20px;
+  }
+  
+  .member .name {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+  }
+  
+  .member .name:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+  }
+  
+  .member::before,
+  .member::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    height: 2px;
+    border-color: #ccc;
+    border-style: solid;
+    border-width: 2px;
+  }
+  
+  .member::before {
+    left: -20px;
+    width: 20px;
+    border-right: none;
+  }
+  
+  .member::after {
+    right: -20px;
+    width: 20px;
+    border-left: none;
+  }
+  
+  .member:first-child::before {
+    display: none;
+  }
+  
+  .member:last-child::after {
+    display: none;
+  }
+  
+ 
+  .children {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    position: relative;
+  }
+  
+
+  .children .member::before,
+  .children .member::after {
+    top: 50%;
+  }
+  
+  /* Highlight effect */
+  .highlight {
+    background-color: #ff9800 !important;
+    transform: scale(1.1);
+  }
+  

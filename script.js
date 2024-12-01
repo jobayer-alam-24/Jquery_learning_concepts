@@ -286,19 +286,21 @@ $(function() {
     let innerBox1 = $('#innerBox1');
     let innerBox2 = $('#innerBox2');
     let innerBox3 = $('#innerBox3');
+    let innerBox4 = $('#innerBox4');
     innerBox1.width(boxWidth / 2);
     innerBox1.height(boxHeight / 2);
     innerBox2.width(innerBox1.width() / 2);
     innerBox2.height(innerBox1.height() / 2);
     innerBox3.width(innerBox2.width() / 2);
     innerBox3.height(innerBox2.height() / 2);
+    innerBox4.width(innerBox3.width() / 2);
+    innerBox4.height(innerBox3.height() / 2);
     
     //Selectors---
-    // innerBox3.parent().css("border-color", "red")
+    // innerBox3.parent().css("border-color", "red");
     // innerBox3.parents().css("border-color", "red");
     // innerBox3.parents("#innerBox2").css("border-color", "red");
     // innerBox3.parentsUntil(box).css("border-color", "red");
-
     // console.log("Width: " + box.width() + "px");
     // console.log("Height: " + box.height() + "px");
     // console.log("Inner Width: " + box.innerWidth() + "px");
