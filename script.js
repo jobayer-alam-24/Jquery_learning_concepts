@@ -347,3 +347,29 @@ $(function() {
     // console.log("Outer Width (true): " + box.outerWidth(true) + "px");
     // console.log("Outer Height (true): " + box.outerHeight(true) + "px");
 })
+$(function () 
+{
+    //not working..i will try in ASP.NET MVC
+    const person = {name: "Rahim", age: 15, roll: 1};
+
+    let txt_data = $('#txt_data');
+    let json_data = $("#json_data");
+    let html_data = $('#html_data');
+    
+    txt_data.load('server/data.txt', null, (content, statusTxt, xhr) =>
+    {
+        PrintData(content, statusTxt, xhr);
+    });
+    json_data.load('server/data.json', null, (content, statusTxt, xhr) => {
+        PrintData(content, statusTxt, xhr);
+    });
+    html_data.load('server/data.html', null, (content, statusText, xhr) => {
+        PrintData(content, statusText, xhr);
+    });
+
+    function PrintData(content, statusText, xmlRequest){
+        console.log(`Content: ${content}`);
+        console.log(`Status Messege: ${statusText}`);
+        console.log(xmlRequest);
+    }
+})
