@@ -356,6 +356,16 @@ $(function ()
     let json_data = $("#json_data");
     let html_data = $('#html_data');
     
+
+    txt_data.load('server/data.txt', null, (response, statusTxt, xhr) => 
+    {
+        if(statusTxt == "success") 
+            console.log("Data Loaded Successfully!");
+        else
+            console.log("Error: Data did not load!");
+    });
+    html_data.load("server/data.html #para"); //partial data
+
     txt_data.load('server/data.txt', null, (content, statusTxt, xhr) =>
     {
         PrintData(content, statusTxt, xhr);
@@ -363,9 +373,13 @@ $(function ()
     json_data.load('server/data.json', null, (content, statusTxt, xhr) => {
         PrintData(content, statusTxt, xhr);
     });
-    html_data.load('server/data.html', null, (content, statusText, xhr) => {
-        PrintData(content, statusText, xhr);
+    html_data.load('server/dataF.html', null, (content, statusText, xhr) => {
+        if(statusText == "error")
+        {
+            console.log(`An error: ${xhr.status} ${xhr.statusText}`)
+        }
     });
+
 
     function PrintData(content, statusText, xmlRequest){
         console.log(`Content: ${content}`);
