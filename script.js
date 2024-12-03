@@ -405,3 +405,16 @@ $(document).submit((e) => e.preventDefault());
 //     custom('.box').click(() => console.log("Hello-HI"));
 // })
 
+$(function() {
+    let searchInput = $("#searchInput");
+    let tableRow = $("#dataTable tr");
+    
+    searchInput.on('keyup', function(){
+        let value = $(this).val().toLowerCase();
+
+        tableRow.filter(function() {
+            let check = $(this).text().toLowerCase().indexOf(value);
+            $(this).toggle(check > -1);
+        })
+    })
+})
