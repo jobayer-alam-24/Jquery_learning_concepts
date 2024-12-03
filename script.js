@@ -390,4 +390,17 @@ $(function ()
     }})
 
 
+$.noConflict()
+jQuery(function () { //way 1
+    console.log(jQuery);
+})
 
+var jq = $.noConflict();  //way 2
+jq('.box').click(function (e) { 
+    e.preventDefault();
+    console.log("Hello");
+});
+
+$(function (custom) { //way 3
+    custom('.box').click(() => console.log("Hello-HI"));
+})
