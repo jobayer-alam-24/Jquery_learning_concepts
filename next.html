@@ -9,8 +9,48 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    
     <h1 class="head">Welcome To Jquery</h1>
+    <div class="container">
+        <h1>Searchable Table</h1>
+        <input type="text" id="searchInput" placeholder="Search by name..." onkeyup="filterTable()" />
+        
+        <table id="dataTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>City</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Alpha</td>
+                    <td>25</td>
+                    <td>New York</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Gamma</td>
+                    <td>30</td>
+                    <td>Los Angeles</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Beta</td>
+                    <td>35</td>
+                    <td>Chicago</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Delta</td>
+                    <td>28</td>
+                    <td>Miami</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
     <div class="box-model mb">
         <div id="innerBox1">
             1
