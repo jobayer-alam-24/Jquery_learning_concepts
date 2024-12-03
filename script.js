@@ -350,35 +350,48 @@ $(function() {
 $(function () 
 {
     //not working..i will try in ASP.NET MVC
-    const person = {name: "Rahim", age: 15, roll: 1};
+    // const person = {name: "Rahim", age: 15, roll: 1};
 
-    let txt_data = $('#txt_data');
-    let json_data = $("#json_data");
-    let html_data = $('#html_data');
+    // let txt_data = $('#txt_data');
+    // let json_data = $("#json_data");
+    // let html_data = $('#html_data');
     
 
-    txt_data.load('server/data.txt', null, (response, statusTxt, xhr) => 
-    {
-        if(statusTxt == "success") 
-            console.log("Data Loaded Successfully!");
-        else
-            console.log("Error: Data did not load!");
-    });
-    html_data.load("server/data.html #para"); //partial data
+    // txt_data.load('server/data.txt', null, (response, statusTxt, xhr) => 
+    // {
+    //     if(statusTxt == "success") 
+    //         console.log("Data Loaded Successfully!");
+    //     else
+    //         console.log("Error: Data did not load!");
+    // });
+    // html_data.load("server/data.html #para"); //partial data
 
-    txt_data.load('server/data.txt', null, (content, statusTxt, xhr) =>
+    // txt_data.load('server/data.txt', null, (content, statusTxt, xhr) =>
+    // {
+    //     PrintData(content, statusTxt, xhr);
+    // });
+    // json_data.load('server/data.json', null, (content, statusTxt, xhr) => {
+    //     PrintData(content, statusTxt, xhr);
+    // });
+    // html_data.load('server/data.html', null, (content, statusText, xhr) => {
+    //     if(statusText == "error")
+    //     {
+    //         console.log(`An error: ${xhr.status} ${xhr.statusText}`)
+    //     }
+    // });
+    
+    //Get method for only statuc files
+    $.get('server/data.json', (data, statusT) => 
     {
-        PrintData(content, statusTxt, xhr);
+        console.log(data);
     });
-    json_data.load('server/data.json', null, (content, statusTxt, xhr) => {
-        PrintData(content, statusTxt, xhr);
-    });
-    html_data.load('server/dataF.html', null, (content, statusText, xhr) => {
-        if(statusText == "error")
-        {
-            console.log(`An error: ${xhr.status} ${xhr.statusText}`)
-        }
-    });
+    $.get('server/data.txt', (response, statusText) => {
+        console.log(response);
+    } )
+    $.get("/next.html", (data, statusText) => {
+        // console.log(data);
+    })
+    
 
 
     function PrintData(content, statusText, xmlRequest){
