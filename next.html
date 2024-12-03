@@ -6,14 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jquery - practice</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
     <h1 class="head">Welcome To Jquery</h1>
     <div class="container">
-        <h1>Searchable Table</h1>
-        <input type="text" id="searchInput" placeholder="Search by name..." onkeyup="filterTable()" />
-        
+        <h1>Searchable Table + List</h1>
+        <input type="text" id="searchInput" placeholder="Search by name..." />
+        <ol id="book-lists">
+
+            <li>To Kill a Mockingbird by Harper Lee</li>
+            <li>1984 by George Orwell</li>
+            <li>The Great Gatsby by F. Scott Fitzgerald</li>
+            <li>Pride and Prejudice by Jane Austen</li>
+            <li>The Catcher in the Rye by J.D. Salinger</li>
+            <li>Moby-Dick by Herman Melville</li>
+            <li>The Lord of the Rings by J.R.R. Tolkien</li>
+            <li>Harry Potter and the Sorcerer’s Stone by J.K. Rowling</li>
+            <li>Brave New World by Aldous Huxley</li>
+            <li>The Hobbit by J.R.R. Tolkien</li>
+        </ol>
         <table id="dataTable">
             <thead>
                 <tr>
@@ -59,7 +74,7 @@
                 <div id="innerBox3">
                     3
                     <div id="innerBox4">
-                    4
+                        4
                     </div>
                 </div>
             </div>
@@ -108,4 +123,5 @@
     <script src="library/jquery-3.7.1.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>
