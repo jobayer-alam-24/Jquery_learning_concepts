@@ -406,26 +406,63 @@ $(document).submit((e) => e.preventDefault());
 // })
 
 //Search TABLE
+// $(function()
+// {
+//     let searchInput = $("#searchInput");
+//     let tableRow = $("#dataTable tr");
+//     let bookLists = $("#book-lists li");
+
+//     searchInput.on('keyup', function()
+//     {
+//         let value = $(this).val().toLowerCase();
+//         tableRow.filter(function() {
+//             $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+//         })
+//     })
+
+//     searchInput.on('keyup', function()
+//     {
+//         let value = $(this).val().toLowerCase();
+//         bookLists.filter(function()
+//         {
+//             $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+//         })
+//     })
+// })
+
+//Jquery Selectors (Overview)
+function addCss(selector){
+    selector.css("background-color", 'red');
+}  
 $(function()
 {
-    let searchInput = $("#searchInput");
-    let tableRow = $("#dataTable tr");
-    let bookLists = $("#book-lists li");
-
-    searchInput.on('keyup', function()
-    {
-        let value = $(this).val().toLowerCase();
-        tableRow.filter(function() {
-            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
-        })
-    })
-
-    searchInput.on('keyup', function()
-    {
-        let value = $(this).val().toLowerCase();
-        bookLists.filter(function()
-        {
-            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
-        })
-    })
+    let id = $("#LastName, .intro, h1"); //select multiple elements using (,)
+    let pFirst = $("p:first");
+    let pLast = $("p:last");
+    let trEven = $("li:even");
+    let trOdd = $("li:odd");
+    let firstChild = $("li:first-child");
+    let lastChild = $("li:last-child")
+    let firstOfType = $("li:first-of-type");
+    let lastOfType = $("li:last-of-type");
+    let nthChild = $("li:nth-child(2)");
+    let nthLastChild = $("li:nth-last-child(2)");
+    let nthOfType = $("li:nth-of-type(2n-1)")
+    let nthLastNthOfType = $("li:nth-last-of-type(2)"); 
+    let onlyChild = $("b:only-child");
+    let directChild = $("div > p"); //Direct Child | selector > selector | 
+    let descendent = $("div p");
+    let afterPOfUl = $("ul + p"); // + means after something..
+    let siblings = $("div ~ p"); // ~ means siblings..
+    let indexing = $("ul li:eq(0)"); // eq(index), gt(index), lt(index)
+    let header = $(":header")
+    let headerNot = $(":header:not(h1)");
+    let contains = $(":contains(Italian)");
+    let divHasP =$("div:has(p)");
+    let empty = $(":empty"); //empty elements
+    let root = $(":root");
+    let attrib = $("[id=my-Address]");
+    let attribNot = $("[id!=my-Address]");
+    let selected = $(":file"); // :typeName
+    addCss(selected);
 })
