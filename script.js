@@ -496,4 +496,18 @@ $(function()
     {
         $(this).parents("tr").remove();
     });
+    $(document).on('mouseenter', '.item', function()
+    {
+        $(this).css("background-color", "lightgreen");
+    })
+    $(document).on('mouseleave', '.item', function()
+    {
+        $(this).css("background-color", "");
+    })
+    $(document).on('change', "[type='checkbox']", function()
+    {
+        let spanTag = $(this).parents("label").find('span');
+        spanTag.toggleClass('strike');
+        console.log(spanTag);
+    })  
 })

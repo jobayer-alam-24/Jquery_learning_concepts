@@ -10,6 +10,7 @@ body
     padding: 20px;
     border-radius: 8px;
 }
+.strike{text-decoration: line-through;}
 .bg{background-color: yellow;}
 h1 {
     text-align: center;
