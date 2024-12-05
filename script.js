@@ -436,33 +436,64 @@ function addCss(selector){
 }  
 $(function()
 {
-    let id = $("#LastName, .intro, h1"); //select multiple elements using (,)
-    let pFirst = $("p:first");
-    let pLast = $("p:last");
-    let trEven = $("li:even");
-    let trOdd = $("li:odd");
-    let firstChild = $("li:first-child");
-    let lastChild = $("li:last-child")
-    let firstOfType = $("li:first-of-type");
-    let lastOfType = $("li:last-of-type");
-    let nthChild = $("li:nth-child(2)");
-    let nthLastChild = $("li:nth-last-child(2)");
-    let nthOfType = $("li:nth-of-type(2n-1)")
-    let nthLastNthOfType = $("li:nth-last-of-type(2)"); 
-    let onlyChild = $("b:only-child");
-    let directChild = $("div > p"); //Direct Child | selector > selector | 
-    let descendent = $("div p");
-    let afterPOfUl = $("ul + p"); // + means after something..
-    let siblings = $("div ~ p"); // ~ means siblings..
-    let indexing = $("ul li:eq(0)"); // eq(index), gt(index), lt(index)
-    let header = $(":header")
-    let headerNot = $(":header:not(h1)");
-    let contains = $(":contains(Italian)");
-    let divHasP =$("div:has(p)");
-    let empty = $(":empty"); //empty elements
-    let root = $(":root");
-    let attrib = $("[id=my-Address]");
-    let attribNot = $("[id!=my-Address]");
-    let selected = $(":file"); // :typeName
-    addCss(selected);
+    // let id = $("#LastName, .intro, h1"); //select multiple elements using (,)
+    // let pFirst = $("p:first");
+    // let pLast = $("p:last");
+    // let trEven = $("li:even");
+    // let trOdd = $("li:odd");
+    // let firstChild = $("li:first-child");
+    // let lastChild = $("li:last-child")
+    // let firstOfType = $("li:first-of-type");
+    // let lastOfType = $("li:last-of-type");
+    // let nthChild = $("li:nth-child(2)");
+    // let nthLastChild = $("li:nth-last-child(2)");
+    // let nthOfType = $("li:nth-of-type(2n-1)")
+    // let nthLastNthOfType = $("li:nth-last-of-type(2)"); 
+    // let onlyChild = $("b:only-child");
+    // let directChild = $("div > p"); //Direct Child | selector > selector | 
+    // let descendent = $("div p");
+    // let afterPOfUl = $("ul + p"); // + means after something..
+    // let siblings = $("div ~ p"); // ~ means siblings..
+    // let indexing = $("ul li:eq(0)"); // eq(index), gt(index), lt(index)
+    // let header = $(":header")
+    // let headerNot = $(":header:not(h1)");
+    // let contains = $(":contains(Italian)");
+    // let divHasP =$("div:has(p)");
+    // let empty = $(":empty"); //empty elements
+    // let root = $(":root");
+    // let attrib = $("[id=my-Address]");
+    // let attribNot = $("[id!=my-Address]");
+    // let selected = $(":file"); // :typeName
+    // addCss(selected);
+
+    //Event Delegation
+    $(document).on('click', "tr", function()
+    {
+        let text = $(this).text();
+        console.log(text);
+    });
+    let add_btn = $(".addRow");
+    let id = 5;
+    add_btn.on("click", function()
+    {
+        let tableBody = $("#dataTable tbody");
+        let name = prompt("Enter Your Name: ");
+        let age = prompt("Enter Your Age: ");
+        let city = prompt("Enter Your City: ");
+        let row = `
+                <tr>
+                    <td>${id++}</td>
+                    <td>${name}</td>
+                    <td>${age}</td>
+                    <td>${city}</td>
+                    <td>
+                        <button class="del">Delete</button>
+                    </td>
+                </tr>`;
+        tableBody.append(row);
+    })
+    $(document).on("click", ".del", function()
+    {
+        $(this).parents("tr").remove();
+    });
 })
