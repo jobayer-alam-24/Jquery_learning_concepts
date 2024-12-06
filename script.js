@@ -431,11 +431,10 @@ $(document).submit((e) => e.preventDefault());
 // })
 
 //Jquery Selectors (Overview)
-function addCss(selector){
+function addCss(selector) {
     selector.css("background-color", 'red');
-}  
-$(function()
-{
+}
+$(function () {
     // let id = $("#LastName, .intro, h1"); //select multiple elements using (,)
     // let pFirst = $("p:first");
     // let pLast = $("p:last");
@@ -467,15 +466,13 @@ $(function()
     // addCss(selected);
 
     //Event Delegation
-    $(document).on('click', "tr", function()
-    {
+    $(document).on('click', "tr", function () {
         let text = $(this).text();
         console.log(text);
     });
     let add_btn = $(".addRow");
     let id = 5;
-    add_btn.on("click", function()
-    {
+    add_btn.on("click", function () {
         let tableBody = $("#dataTable tbody");
         let name = prompt("Enter Your Name: ");
         let age = prompt("Enter Your Age: ");
@@ -492,22 +489,31 @@ $(function()
                 </tr>`;
         tableBody.append(row);
     })
-    $(document).on("click", ".del", function()
-    {
+    $(document).on("click", ".del", function () {
         $(this).parents("tr").remove();
     });
-    $(document).on('mouseenter', '.item', function()
-    {
+    $(document).on('mouseenter', '.item', function () {
         $(this).css("background-color", "lightgreen");
     })
-    $(document).on('mouseleave', '.item', function()
-    {
+    $(document).on('mouseleave', '.item', function () {
         $(this).css("background-color", "");
     })
-    $(document).on('change', "[type='checkbox']", function()
-    {
+    $(document).on('change', "[type='checkbox']", function () {
         let spanTag = $(this).parents("label").find('span');
         spanTag.toggleClass('strike');
         console.log(spanTag);
-    })  
+    })
+    //Dependent Select Box........
+    $('.select-box1').on('change', 'select', function(){
+        let selectedVal = $(this).val();
+        
+        let selectBox2 = $('.select-box2 select').children();
+        selectBox2.filter(function(){
+            let box2Value = $(this).val();
+            if(box2Value == selectedVal)
+            {
+                $(this).attr('selected', 'true');
+            }
+        })
+    });
 })
