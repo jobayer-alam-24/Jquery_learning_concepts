@@ -466,43 +466,43 @@ $(function () {
     // addCss(selected);
 
     //Event Delegation
-    $(document).on('click', "tr", function () {
-        let text = $(this).text();
-        console.log(text);
-    });
-    let add_btn = $(".addRow");
-    let id = 5;
-    add_btn.on("click", function () {
-        let tableBody = $("#dataTable tbody");
-        let name = prompt("Enter Your Name: ");
-        let age = prompt("Enter Your Age: ");
-        let city = prompt("Enter Your City: ");
-        let row = `
-                <tr>
-                    <td>${id++}</td>
-                    <td>${name}</td>
-                    <td>${age}</td>
-                    <td>${city}</td>
-                    <td>
-                        <button class="del">Delete</button>
-                    </td>
-                </tr>`;
-        tableBody.append(row);
-    })
-    $(document).on("click", ".del", function () {
-        $(this).parents("tr").remove();
-    });
-    $(document).on('mouseenter', '.item', function () {
-        $(this).css("background-color", "lightgreen");
-    })
-    $(document).on('mouseleave', '.item', function () {
-        $(this).css("background-color", "");
-    })
-    $(document).on('change', "[type='checkbox']", function () {
-        let spanTag = $(this).parents("label").find('span');
-        spanTag.toggleClass('strike');
-        console.log(spanTag);
-    })
+    // $(document).on('click', "tr", function () {
+    //     let text = $(this).text();
+    //     console.log(text);
+    // });
+    // let add_btn = $(".addRow");
+    // let id = 5;
+    // add_btn.on("click", function () {
+    //     let tableBody = $("#dataTable tbody");
+    //     let name = prompt("Enter Your Name: ");
+    //     let age = prompt("Enter Your Age: ");
+    //     let city = prompt("Enter Your City: ");
+    //     let row = `
+    //             <tr>
+    //                 <td>${id++}</td>
+    //                 <td>${name}</td>
+    //                 <td>${age}</td>
+    //                 <td>${city}</td>
+    //                 <td>
+    //                     <button class="del">Delete</button>
+    //                 </td>
+    //             </tr>`;
+    //     tableBody.append(row);
+    // })
+    // $(document).on("click", ".del", function () {
+    //     $(this).parents("tr").remove();
+    // });
+    // $(document).on('mouseenter', '.item', function () {
+    //     $(this).css("background-color", "lightgreen");
+    // })
+    // $(document).on('mouseleave', '.item', function () {
+    //     $(this).css("background-color", "");
+    // })
+    // $(document).on('change', "[type='checkbox']", function () {
+    //     let spanTag = $(this).parents("label").find('span');
+    //     spanTag.toggleClass('strike');
+    //     console.log(spanTag);
+    // })
     //Dependent Select Box........
     $('.select-box1').on('change', 'select', function(){
         let selectedVal = $(this).val();
@@ -516,4 +516,23 @@ $(function () {
             }
         })
     });
+    var values = [];
+    let id = [];
+    $('.delete').click(() => {
+        values = []; 
+        id = [];
+        $('.container :checkbox:checked').each(function(i){
+            values[i] = $(this).val();
+        })
+        console.log(values);
+        if(values.length >= 0){
+            for(let i = 0; i < values.length; i++){
+                id[i] = `#${values[i]}`;
+            }
+        }
+        id.forEach(function (item) {
+            console.log(item);
+            $(`${item}`).remove();
+        })
+    })
 })
