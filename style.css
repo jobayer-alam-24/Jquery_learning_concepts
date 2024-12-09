@@ -32,6 +32,22 @@ body
     border: 5px solid salmon;
     bottom: 50px;
 }
+.tooltip-container
+{
+    width: 200px;
+    height: 100px;
+    background-color: rgb(10, 93, 141);
+    text-align: center;
+    color: white;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    margin: auto;
+    display: none;
+    position: fixed;
+}
 .box-outer h2, p{
     color: white;
     text-align: center;

@@ -567,4 +567,14 @@ $(function () {
             left.text(parseInt(x) + "px");
         }, 1000);
     });
+    h2.on("mouseenter", function(){
+        let tooltip = $(".tooltip-container");
+        let headOffset = h2.offset();
+        tooltip.show();
+        tooltip.css({
+            left: headOffset.left + 10,
+            top: headOffset.top + 10
+        })
+        console.log(headOffset);
+    })
 })
