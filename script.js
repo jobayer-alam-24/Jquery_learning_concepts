@@ -504,14 +504,13 @@ $(function () {
     //     console.log(spanTag);
     // })
     //Dependent Select Box........
-    $('.select-box1').on('change', 'select', function(){
+    $('.select-box1').on('change', 'select', function () {
         let selectedVal = $(this).val();
-        
+
         let selectBox2 = $('.select-box2 select').children();
-        selectBox2.filter(function(){
+        selectBox2.filter(function () {
             let box2Value = $(this).val();
-            if(box2Value == selectedVal)
-            {
+            if (box2Value == selectedVal) {
                 $(this).attr('selected', 'true');
             }
         })
@@ -519,14 +518,14 @@ $(function () {
     var values = [];
     let id = [];
     $('.delete').click(() => {
-        values = []; 
+        values = [];
         id = [];
-        $('.container :checkbox:checked').each(function(i){
+        $('.container :checkbox:checked').each(function (i) {
             values[i] = $(this).val();
         })
         console.log(values);
-        if(values.length >= 0){
-            for(let i = 0; i < values.length; i++){
+        if (values.length >= 0) {
+            for (let i = 0; i < values.length; i++) {
                 id[i] = `#${values[i]}`;
             }
         }
@@ -535,4 +534,37 @@ $(function () {
             $(`${item}`).remove();
         })
     })
+    let outer_box = $(".box-outer");
+    let h2 = outer_box.find("h2");
+    let p = h2.next();
+
+    outer_box.click(function () {
+        $(window).scrollTop(641);
+        var position = h2.position();
+        console.log("Postion: ");
+        console.log(position);
+        console.log("X: " + position.left + "px");
+        console.log("Y: " + position.top + "px");
+        var offset = h2.offset();
+        console.log("Offset: ");
+        console.log(offset);
+        console.log("X: " + h2.offset().left + "px");
+        console.log("Y: " + h2.offset().top + "px");
+
+        // set offset 
+        outer_box.offset({
+            left: 0,
+            top: 1000
+        });
+    });
+    let top = $("#top");
+    let left = $("#left");
+    $(window).scroll(function () {
+        setTimeout(function () {
+            let x = $(this).scrollLeft();
+            let y = $(this).scrollTop();
+            top.text(parseInt(y) + "px");
+            left.text(parseInt(x) + "px");
+        }, 1000);
+    });
 })
